@@ -1,4 +1,4 @@
-import logging
+WW1import logging
 import os
 import random
 import string
@@ -47,13 +47,6 @@ try:
 except:
     pass 
 
-SUDO_USERS = set()
-try:
-    aid = getConfig('SUDO_USERS')
-    aid = aid.split(' ')
-    for _id in aid:
-        SUDO_USERS.add(int(_id))
-
 load_dotenv('config.env', override=True)
 
 Interval = []
@@ -81,6 +74,13 @@ try:
         AUTHORIZED_CHATS.add(int(user))
 except:
     pass
+
+SUDO_USERS = set()
+try:
+    aid = getConfig('SUDO_USERS')
+    aid = aid.split(' ')
+    for _id in aid:
+        SUDO_USERS.add(int(_id))
 
 try:
     BOT_TOKEN = get_config('BOT_TOKEN')

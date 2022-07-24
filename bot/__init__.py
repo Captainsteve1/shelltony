@@ -39,6 +39,8 @@ try:
     for _id in aid:
         SUDO_USERS.add(int(_id))
 except:
+    pass
+
     try:
     CONFIG_ENV_URL = get_config('CONFIG_ENV_URL')
     if len(CONFIG_ENV_URL) == 0:

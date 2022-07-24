@@ -8,7 +8,7 @@ from bot import AS_DOC_USERS, AS_MEDIA_USERS, dispatcher, AS_DOCUMENT, AUTO_DELE
 from bot.message_utils import sendMessage, sendMarkup, editMessage, auto_delete_message
 from bot.filters import CustomFilters
 from bot.bot_commands import BotCommands
-from bot. import button_build
+from bot.button_build import button_build
 from bot.db_handler import DbManger
 
 

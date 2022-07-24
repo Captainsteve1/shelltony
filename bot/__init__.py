@@ -67,6 +67,12 @@ TELEGRAPH = []
 DEST_DRIVES = {}
 
 AUTHORIZED_CHATS = set()
+SUDO_USERS = set()
+AS_DOC_USERS = set()
+AS_MEDIA_USERS = set()
+EXTENTION_FILTER = set(['.torrent'])
+LEECH_LOG = set()
+MIRROR_LOGS = set()
 
 download_dict_lock = Lock()
 status_reply_dict_lock = Lock()

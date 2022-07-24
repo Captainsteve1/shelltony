@@ -55,11 +55,10 @@ try:
     except Exception as e:
         LOGGER.error(f"CONFIG_ENV_URL: {e}")
 except:
-    pass
 
-try:
-    AS_DOCUMENT = getConfig('AS_DOCUMENT')
-    AS_DOCUMENT = AS_DOCUMENT.lower() == 'true'
+    try:
+        AS_DOCUMENT = getConfig('AS_DOCUMENT')
+        AS_DOCUMENT = AS_DOCUMENT.lower() == 'true'
 except:
     AS_DOCUMENT = False
 except: 

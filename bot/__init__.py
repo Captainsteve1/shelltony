@@ -31,6 +31,16 @@ LOGGER = logging.getLogger(__name__)
 def get_config(name: str):
     return os.environ[name]
 
+
+SUDO_USERS = set()
+try:
+    aid = getConfig('SUDO_USERS')
+    aid = aid.split(' ')
+    for _id in aid:
+        SUDO_USERS.add(int(_id))
+except:
+    pass
+
 try:
     CONFIG_ENV_URL = get_config('CONFIG_ENV_URL')
     if len(CONFIG_ENV_URL) == 0:

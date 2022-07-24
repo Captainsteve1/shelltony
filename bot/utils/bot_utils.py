@@ -5,7 +5,7 @@ import time
 from html import escape
 from psutil import virtual_memory, cpu_percent, disk_usage
 
-from bot.helper.telegram_helper.bot_commands import BotCommands
+from bot.utils.bot_commands import BotCommands
 from bot import botStartTime, DOWNLOAD_DIR, download_dict, download_dict_lock
 
 SIZE_UNITS = ['B', 'KB', 'MB', 'GB', 'TB', 'PB']

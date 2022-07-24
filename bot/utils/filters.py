@@ -22,3 +22,12 @@ class CustomFilters:
             return bool(message.chat.id in AUTHORIZED_CHATS)
 
     authorized_chat = __AuthorizedChat()
+
+    class __SudoUser(MessageFilter):
+        def filter(self, message: Message):
+            return message.from_user.id in SUDO_USERS or message.from_user.id == OWNER_ID
+
+    sudo_user = __SudoUser()
+
+    def _owner_query(self):
+        return self == OWNER_ID or self in SUDO_USERS

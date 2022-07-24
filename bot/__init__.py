@@ -1,4 +1,4 @@
-WW1import logging
+import logging
 import os
 import random
 import string

@@ -45,7 +45,14 @@ try:
     except Exception as e:
         LOGGER.error(f"CONFIG_ENV_URL: {e}")
 except:
-    pass
+    pass 
+
+SUDO_USERS = set()
+try:
+    aid = getConfig('SUDO_USERS')
+    aid = aid.split(' ')
+    for _id in aid:
+        SUDO_USERS.add(int(_id))
 
 load_dotenv('config.env', override=True)
 

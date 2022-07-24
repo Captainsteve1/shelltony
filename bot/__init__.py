@@ -81,6 +81,8 @@ try:
     aid = aid.split(' ')
     for _id in aid:
         SUDO_USERS.add(int(_id))
+except:
+    pass
 
 try:
     BOT_TOKEN = get_config('BOT_TOKEN')

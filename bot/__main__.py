@@ -3,7 +3,7 @@ from bot import updater, LOGGER, dispatcher
 from bot.utils.filters import CustomFilters
 from telegram.ext import Filters, MessageHandler
 from bot.utils.message_utils import editMessage, sendLogFile, sendMessage
-from .modules import shell, authorize, leech_settings
+from .modules import shell, authorize
 
 def ping(update, context):
     start_time = int(round(time() * 1000))

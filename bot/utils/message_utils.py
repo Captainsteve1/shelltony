@@ -3,7 +3,7 @@ from telegram.message import Message
 
 from bot import bot, LOGGER, Interval, STATUS_UPDATE_INTERVAL, \
     status_reply_dict, status_reply_dict_lock
-from bot.utils import SetInterval, get_readable_message
+from bot.utils.bot_utils import SetInterval, get_readable_message
 
 def sendMessage(text: str, bot, message: Message):
     try:

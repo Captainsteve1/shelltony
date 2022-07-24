@@ -1,0 +1,33 @@
+{
+    "name": "ShellBot",
+    "repository": "https://github.com/junedkh/shellbot",
+    "env": {
+        "SUDO_USERS": {
+            "description": "",
+            "required": "Flase"
+        },
+        "BOT_TOKEN": {
+            "description": "",
+            "required": "True"
+        },
+        "OWNER_ID": {
+            "description": "",
+            "required": "True"
+        },
+        "TELEGRAM_API": {
+            "description": "",
+            "required": "True"
+        },
+        "TELEGRAM_HASH": {
+            "description": "",
+            "required": "True"
+        }
+    },
+    "stack": "container",
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    }
+}

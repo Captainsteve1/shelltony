@@ -6,7 +6,7 @@ from bot import AUTHORIZED_CHATS, OWNER_ID
 class CustomFilters:
     class __OwnerFilter(MessageFilter):
         def filter(self, message: Message):
-            return bool(message.from_user.id == OWNER_ID)
+            return message.from_user.id == OWNER_ID
 
     owner_filter = __OwnerFilter()
 

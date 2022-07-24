@@ -130,6 +130,12 @@ except:
     USE_SERVICE_ACCOUNTS = False
 
 try:
+    AS_DOCUMENT = getConfig('AS_DOCUMENT')
+    AS_DOCUMENT = AS_DOCUMENT.lower() == 'true'
+except:
+    AS_DOCUMENT = False
+
+try:
     STATUS_UPDATE_INTERVAL = get_config('STATUS_UPDATE_INTERVAL')
     if len(STATUS_UPDATE_INTERVAL) == 0:
         raise KeyError
